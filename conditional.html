@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional</title>
+</head>
+<body>
+
+<script>
+    var n = prompt("Enter your no.: ");
+    let num = n, sum = 0;
+    let count = 0;
+
+    while (n) {
+        var a = n % 10;
+        count++;
+        n = Math.floor(n / 10);
+    }
+
+    while (num) {
+        var a = num % 10;
+        sum += Math.pow(a, count);
+        num = Math.floor(num / 10);
+    }
+    if (sum == num) {
+        document.write("Armstrong Number");
+    }
+    else {
+        document.write("Not an Armstrong Number");
+    }
+
+</script>
+
+</body>
+</html>
