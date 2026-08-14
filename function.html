@@ -21,7 +21,7 @@
         abes(30,50);*/
        /* const abes=(a,b)=>a+b;
         document.write(abes(10,20));*/
-        
+
         let a = prompt("Enter 1 for Car, 2 for Aeroplane, 3 for Helicopter:");
         
         if (a == 1) {
@@ -45,7 +45,7 @@ else if (a == 2) {
             return "Sorry! Only 6 seats are available.";
         }
         let cost = seats * 10;
-        return "Vehicle: Aeroplane<br>" + "Your seats: " + seats + "<br>" + "Total cost: " + cost + " lakhs";
+        return "Vehicle: Aeroplane<br>" + "Your seats: " + seats + "<br>" + "Total cost: " + cost + " thousand";
     };
     document.write(Aeroplane());
 } 
@@ -58,7 +58,7 @@ else if (a == 3) {
         let cost = seats * 50;
         return "Vehicle: Helicopter<br>" +
                "Your seats: " + seats + "<br>" +
-               "Total cost: " + cost + " lakhs";
+               "Total cost: " + cost + " thousand";
     };
     document.write(helicopter());
 }

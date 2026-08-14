@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <p id="abc"></p>
+    <script>
+        // Create object
+       
+        const student={
+            name:"xyz",
+            class:"B.tech",
+            fee:100000
+        }
+       /* for(let i in student){
+            document.getElementById("abc").innerHTML+i+":"+student(i)+"<br>";
+        }*/
+
+       // document.write(student); // if we pass only student then it returns an array as it is a part of dom so we can not access it without dot
+      
+       /*document.write("<br>"+student.name);
+       document.write("<br>"+student.class);
+       document.write("<br>"+student.fee);*/
+
+       for(let i in student){
+        document.write("<br>"+student[i]);
+       }
+
+    </script>
+</body>
+</html
