@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Menu</title>
+
+    <style>
+        .menu {
+            width: 250px;
+            border: 2px solid black;
+            padding: 20px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .item {
+            padding: 8px;
+            margin: 5px;
+            background-color: lightgray;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <h2>Menu</h2>
+        <div id="items"></div>
+        <button onclick="order()">Order Now</button>
+    </div>
+
+    <script>
+
+        const grocery = {
+            Tea: 450,
+            Coffee: 600,
+            Sugar: 700,
+            Millets: 500
+        };
+        
+        const image={
+            Tea: "<img src='https://www.istockphoto.com/photo/masala-tea-chai-gm1297483389-390611658' width='100' height='100'>",
+            Coffee: "<img src='https://stock.adobe.com/category/coffee/230' width='100' height='100'>",
+            Sugar: "<img src='https://sarvamsugar.com/refined-sugar.html' width='100' height='100'>",
+            Millets: "<img src='https://stock.adobe.com/search?k=millets' width='100' height='100'>"
+        }
+        const items = document.getElementById("items");
+
+        for (let i in grocery) {
+            items.innerHTML += `
+                <div class="item">
+                    ${i} - ₹${grocery[i]}
+                </div>
+            `;
+        }
+
+        function order() {
+
+            alert("Available options: Tea, Coffee, Sugar, Millets");
+
+let a = prompt("Enter your item name");
+let b = parseInt(prompt("Enter your quantity"));
+
+if (grocery[a]!==undefined) {
+
+    let total=b*grocery[a];
+
+    document.write(`
+        <div style="
+            width: 300px;
+            padding: 20px;
+            margin: 50px auto;
+            border: 2px solid black;
+            color:black;
+            border-radius: 15px;
+            text-align: center;
+            font-family: Arial;
+            box-shadow: 0 4px 10px gray;
+        ">
+            <h2> Order Card</h2>
+            <p><b> ${image[a]}</p>
+            <p><b>Item:</b> ${a}</p>
+            <p><b>Quantity:</b> ${b}</p>
+            <p><b>Price:</b> ₹${grocery[a]}</p>
+            <p><b>Total Cost:</b> ₹${total}</p>
+        </div>
+    `);
+
+} else {
+    document.write("Item not available");
+}
+        }
+
+    </script>
+
+</body>
+</html>
