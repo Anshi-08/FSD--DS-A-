@@ -1,4 +1,3 @@
-<!-- ES6 features (2015)-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +7,11 @@
 </head>
 <body>
     <script>
-        const num=[11,22,32,23,6,45];
-        <!--filter creates an array from original array byy selecting the elements from array according to the condition-->
+        const num=[11,22,32,41,5,62,73,81,9];
         const even=num.filter((i)=>(i%2==0));
-        console.log("num==",num);
-        console.log("even==",even);
-
+        const sqr=num.map((i)=>(i*i));
+        const sum=sqr.reduce((i,s)=>(i+s));
+        console.log("sum==",sum);
     </script>
 </body>
 </html>
